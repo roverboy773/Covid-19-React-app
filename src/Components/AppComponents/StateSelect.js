@@ -4,8 +4,6 @@ import {GlobalContext} from "../../context/GlobalContext"
 const StateSelect = () => {
     const {state,setRegion}=useContext(GlobalContext)
 
-    
-
     return (
         <div className="text-center font-bold md:flex flex-row justify-around items-center w-full py-2 md:w-4/5">
         <div >
