@@ -1,0 +1,13 @@
+path{
+    fill:white;
+    transition-delay: .03s;
+    stroke-width: .5px;
+    stroke:gray
+}
+path:hover{
+    /* fill:#2d68b2; */
+    cursor: pointer;
+}
+.selected_state{
+    fill:#2d68b2;
+}

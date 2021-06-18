@@ -1,0 +1,38 @@
+input::-webkit-inner-spin-button{
+    display: none;
+}
+input::-webkit-outer-spin-button{
+    display:none;
+}
+.center{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .2s ease-in-out;
+}
+.center:hover{
+    box-shadow: none;
+}
+.center_content{
+    width:96%;
+}
+
+.selected{
+    background-color:#1A1053 ;
+}
+.filter_button:focus{
+    outline:none;
+}
+.session_container::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+ .session_container::-webkit-scrollbar-track {
+    background: lightgray; 
+  }
+
+ .session_container::-webkit-scrollbar-thumb {
+    background-color: rgba(67, 56, 202,1)
+  }
+
+ .session_container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

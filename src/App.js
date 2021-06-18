@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Components/AppComponents/Navbar'
+import Cases from './Components/AppComponents/Cases'
+import Select from "./Components/AppComponents/Select"
+import Chart from './Components/AppComponents/Chart'
+import StateName from "./Components/AppComponents/StateName"
+import Monuments from "./Components/AppComponents/Monuments"
+import Heading from "./Components/AppComponents/Heading"
+import Heading2 from "./Components/AppComponents/Heading2"
+import IndiaCases from "./Components/AppComponents/IndiaCases"
+
+import { GlobalProvider } from "./context/GlobalContext"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GlobalProvider>
+      <Heading />
+      <div className="content_wrapper my-8 w-screen md:w-11/12 mx-auto md:flex flex-row">
+        <Navbar />
+        <div className="content w-full">
+          <Heading2 />
+          <Chart />
+          <IndiaCases />
+          <StateName />
+          <Monuments />
+          <Cases />
+          <Select/> 
+        </div>
+      </div>
+
+    </GlobalProvider>
+  )
 }
 
 export default App;

@@ -1,0 +1,72 @@
+body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* height:4000px; */
+  scroll-behavior: smooth;
+}
+
+.App{
+  background-color: #D4D2DC;
+}
+.content_wrapper{
+  background-color: #1A1053;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.navbarItem{
+  overflow: hidden;
+  /* background-color: red; */
+}
+.navbarItem .skew{
+  background-color:#f6fbfe;
+  width:100%;
+  transform: skewX(-165deg);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 10px;
+  box-shadow: inset 7px 0 9px -7px rgba(0,0,0,1),
+ inset 0 7px 9px -7px rgba(0,0,0,1);
+
+  
+}
+.navbarItem .skew div{
+  transform: skewX(-15deg);
+  /* background-color:lightgreen; */
+  
+}
+
+.content{
+  background-color:ghostwhite;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.select{
+  border-radius: 30px;
+}
+
+.india_container{
+  border-radius: 30px;
+  background-color: #dbe8fb;
+}
+.caseComponent{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: .2s ease-in-out;
+}
+.caseComponent:hover{
+  box-shadow: none;
+}
+.selectState{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+
+
+
+
+
+
+
