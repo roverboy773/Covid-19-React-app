@@ -34,7 +34,7 @@ const {state,setRegion}=useContext(GlobalContext)
 
 
     return (
-        <div className="india_container py-4 md:flex items-center justify-center overflow-visible">
+        <div className="india_container mx-auto py-4 md:flex items-center justify-center overflow-visible">
              
             <svg
                 xmlnsmapsvg="http://mapsvg.com"
@@ -46,7 +46,7 @@ const {state,setRegion}=useContext(GlobalContext)
                 version="1.1"
                 id="svg2"
                 height="395.70178"
-                width="360.85999"
+                width="340.85999"
                 viewBox="0 0 650 650"
                 mapsvggeoviewbox="68.184010 37.084109 97.418146 6.753659"
                 fill="#CCCCCC"

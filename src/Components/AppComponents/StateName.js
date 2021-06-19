@@ -1,4 +1,4 @@
-import React,{useContext,useState,useEffect} from 'react'
+import React,{useContext} from 'react'
 import  {GlobalContext} from "../../context/GlobalContext"
 
 const StateName = () => {
@@ -6,7 +6,7 @@ const StateName = () => {
     //
     return (
         <div >
-            <h4 className="text-center font-bold text-2xl text-gray-400">{state.region}</h4>
+            <h4 className="state_name text-center font-bold text-2xl text-gray-400">{state.region}</h4>
         </div>
     )
 }

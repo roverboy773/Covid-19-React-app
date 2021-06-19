@@ -14,9 +14,9 @@ function App() {
   return (
     <GlobalProvider>
       <Heading />
-      <div className="content_wrapper w-full md:w-11/12 my-8 mx-auto md:flex flex-row pl-2">
+      <div className="content_wrapper w-auto md:w-11/12 my-8 mx-auto lg:flex flex-row">
         <Navbar />
-        <div className="content w-full">
+        <div className="content w-full -mt-8 md:mt-0">
           <Heading2 />
           <Chart />
           <IndiaCases />

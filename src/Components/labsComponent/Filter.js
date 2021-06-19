@@ -2,7 +2,7 @@ import React,{useContext,useEffect,} from 'react'
 import { GlobalContextLab } from '../../context/GlobalContextLab'
 const Filter = () => {
 
-const {state,setFilter,removeAllFilter,removeFilter} = useContext(GlobalContextLab)
+const {setFilter,removeAllFilter,removeFilter} = useContext(GlobalContextLab)
     useEffect(() => {
         //console.log(state)
         document.querySelectorAll('.filter_button').forEach((button) => {

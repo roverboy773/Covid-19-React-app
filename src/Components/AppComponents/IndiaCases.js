@@ -23,7 +23,7 @@ const IndiaCases = () => {
             .then((res) => {  return res.json() })
             .then((res) => {
               
-                res.cases_time_series.map((local) => {
+                res.cases_time_series.forEach((local) => {
                     if (local.date === previosDate()) {
                        
                         setIndiaCases({

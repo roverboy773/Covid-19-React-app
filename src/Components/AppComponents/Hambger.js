@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import { Spin as Hamburger } from 'hamburger-react'
-import { isDOMComponent } from 'react-dom/cjs/react-dom-test-utils.production.min'
 
 const Hambger = ({navToggle}) => {
     const [isOpen, setOpen] = useState(false)

@@ -1,11 +1,8 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import DatePicker from 'react-datepicker'
 import "../../../node_modules/react-datepicker/dist/react-datepicker.css";
-import { Chart, Line } from 'react-chartjs-2'
-import * as zoom from 'chartjs-plugin-zoom'
-
-
+import {Line } from 'react-chartjs-2'
 
 const ChartDisplay = () => {
 
@@ -37,7 +34,7 @@ const ChartDisplay = () => {
             .then((res) => { return res.json() })
             .then((res) => {
 
-                res.cases_time_series.map((ele) => {
+                res.cases_time_series.forEach((ele) => {
                     // console.log(ele)
                     let date = +ele.date.split(" ")[0]
                     let month = monthArr.indexOf(ele.date.split(" ")[1]) + 1

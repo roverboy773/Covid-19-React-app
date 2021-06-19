@@ -1,25 +1,20 @@
 import React, { useContext, useEffect ,useState} from 'react'
 import CasesComponent from './CasesComponent'
-import Pending from './Pending'
 import { GlobalContext } from "../../context/GlobalContext"
 
 
 const Cases = () => {
 
     const { state,setCases } = useContext(GlobalContext)
-    const [pending, setPending] = useState(true)
     const [updatedTime, setUpdatedTime] = useState('0:0:0:0')
     //console.log(state)
-  
-    let time;
     useEffect(() => {
-        let mounted=true
     
         fetch("https://api.covid19india.org/data.json")
-            .then((res) => { setPending(true) ;return res.json() })
+            .then((res) => { return res.json() })
             .then((res) => {
                
-                res.statewise.map((local) => {
+                res.statewise.forEach((local) => {
                     if (local.state === state.region) {
                        //console.log(state.region)
                         setUpdatedTime(local.lastupdatedtime)
@@ -48,21 +43,22 @@ const Cases = () => {
             
                 
             }).then(()=>{
-                setPending(false)
-                if(window.innerWidth<=425)
-                  window.scrollTo(0,1620)
+                
+                    const divElement = document.querySelector('.state_name');
+                    divElement.scrollIntoView({ behavior: 'smooth' });
+              
             })
 
             return()=>{
-                mounted=false
+             
             }
             
-    },[state.region] )
+    },[state] )
 
 
 //console.log('pending',pending,'state',state )
     return (
-        <div className="w-11/12  mx-auto">
+        <div className="cases w-11/12  mx-auto">
        
           <div className=" md:flex flex-row pb-12 relative">
                         {/* total confirmed */}
@@ -77,11 +73,6 @@ const Cases = () => {
                     <h3 className="font-bold absolute bottom-0 right-0 text-center text-gray-400">Last Updated <span className="block">{updatedTime}</span></h3>
                     
             </div>
-           
-           
-                 
-          
-        
         </div>
     )
 }
