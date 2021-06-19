@@ -5,7 +5,7 @@ path{
     stroke:gray
 }
 path:hover{
-    /* fill:#2d68b2; */
+    /* fill:#1A1053; */
     cursor: pointer;
 }
 .selected_state{

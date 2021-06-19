@@ -38,15 +38,7 @@ const Cases = () => {
                         })  
                  //   console.log([state.totalConfirmed,state.discharged,state.deaths])
                     }
-
-                })
-            
-                
-            }).then(()=>{
-                
-                    const divElement = document.querySelector('.state_name');
-                    divElement.scrollIntoView({ behavior: 'smooth' });
-              
+                })  
             })
 
             return()=>{
