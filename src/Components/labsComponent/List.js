@@ -28,7 +28,7 @@ const List = ({ centers }) => {
             <Filter></Filter>
             <div className="md:w-11/12 mx-auto mt-8">
                 {
-                    centers && centers.map((ele, index) => {
+                    centers.length>0 ? centers.map((ele, index) => {
                         //console.log(state)
                         //console.log(Object.keys(state).length===0)
 
@@ -36,6 +36,8 @@ const List = ({ centers }) => {
                         return flagState ? <Center key={index} data={ele}></Center>
                             : <FilteredComponents key={index} ele={ele}></FilteredComponents>
                     })
+                    :
+                    <div className="text-gray-400">No Vaccination Center Available to Book at this time,Kindly Check Later</div>
                 }
             </div>
         </div>

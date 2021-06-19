@@ -16,7 +16,7 @@ input::-webkit-outer-spin-button{
 }
 
 .selected{
-    background-color:#1A1053 ;
+    background-color:#ada8c9 ;
 }
 .filter_button:focus{
     outline:none;
@@ -26,11 +26,11 @@ input::-webkit-outer-spin-button{
   }
   
  .session_container::-webkit-scrollbar-track {
-    background: lightgray; 
+    background: rgba(67, 56, 202,1); 
   }
 
  .session_container::-webkit-scrollbar-thumb {
-    background-color: rgba(67, 56, 202,1)
+    background-color: lightgray;
   }
 
  .session_container::-webkit-scrollbar-thumb:hover {

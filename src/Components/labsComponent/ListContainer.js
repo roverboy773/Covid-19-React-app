@@ -54,15 +54,15 @@ const ListContainer = () => {
 
     return (
         <div className='container mx-auto text-center'>
-            <h3 className="text-xl mt-6">Check your nearest vaccination center and slots availability</h3>
-            <h4 className="text-lg">Enter your Pin Code</h4>
+            <h3 className="text-xl mt-6 text-gray-400">Check your nearest vaccination center and slots availability</h3>
+            <h4 className="text-lg text-gray-200">Enter your Pin Code</h4>
             <input type="number" className="outline-none rounded-xl text-center text-lg border-2 border-gray-400 px-2 m-2 w-11/12 md:w-1/5" onChange={(e) => { setPinCode(e.target.value) }} autoFocus />
             <p className="text-md text-red-400 ">{error}</p>
             
             {
                 pending && <Pending></Pending>
             }
-            {pending !== true && Centers.length > 0 && Centers && <List centers={Centers} error={error}></List>}
+            {pending !== true && <List centers={Centers} error={error}></List>}
         </div>
     )
 }

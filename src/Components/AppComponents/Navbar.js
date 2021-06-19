@@ -12,7 +12,7 @@ const Navbar = () => {
         }
     },[navState])
     return (
-        <div className=" md:w-1/12 text-center py-4">
+        <div className=" lg:w-1/12 md:w-1/2 w-10/12 mx-auto text-center py-4">
             <div className="flex items-center justify-around">
                 <i className="fas fa-virus text-3xl text-indigo-900 md:my-6 block"></i>
                  <Hambger navToggle={(State)=>setNavState(State)}></Hambger>

@@ -5,7 +5,6 @@ import { GlobalContextLab } from '../../context/GlobalContextLab'
 const FilteredComponents = ({ ele }) => {
   const { state } = useContext(GlobalContextLab)
   const [filterComponents, setFilterComponents] = useState(null)
-
   //console.log(typeof ele)
    //console.log(finalFlag)
     /////console.log(filterComponents)

@@ -10,9 +10,9 @@ const Labs = () => {
     return (
         <GlobalProvider>
             <Header></Header>
-            <div className="content_wrapper md:flex w-full md:w-11/12 mx-auto my-8">
+            <div className="content_wrapper lg:flex w-full lg:w-11/12 mx-auto my-8">
                 <Navbar />
-                <div className="content bg-white py-8 md:w-11/12 ">
+                <div className="content bg-white py-8 lg:w-11/12 ">
                     <Banner></Banner>
                     <ListContainer></ListContainer>
                 </div>

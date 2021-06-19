@@ -3,10 +3,10 @@ import React from 'react'
 const Centerinfo = ({ data }) => {
     return (
         <div className="w-11/12 md:w-1/5 mx-2">
-            <h3 className="text-lg font-bold text-indigo-500 my-2">{data.name}</h3>
+            <h3 className="text-lg font-bold text-gray-200 my-2">{data.name}</h3>
             <div className="flex justify-between my-2">
-                <h4 className="mr-1">Address</h4>
-                <p className="block w-2/3 text-sm ">{data.address}</p>
+                <h4 className="mr-1 font-bold text-gray-300">Address</h4>
+                <p className="block w-2/3 text-sm text-gray-500">{data.address}</p>
             </div>
 
             {data.fee_type === 'Paid'
