@@ -6,7 +6,7 @@ const StateName = () => {
     //
     return (
         <div >
-            <h4 className="text-center font-bold text-2xl ">{state.region}</h4>
+            <h4 className="text-center font-bold text-2xl text-gray-400">{state.region}</h4>
         </div>
     )
 }

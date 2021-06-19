@@ -3,10 +3,10 @@ import {GlobalContext} from "../../context/GlobalContext"
 
 const Monuments = () => {
   const {state} = useContext(GlobalContext)
-  const img='../image'+state.region+'.svg'
+  //console.log(state)
     return (
         <div className="">
-          {/* <img className="w-1/12 block mx-auto" src={require(`${img}`)} alt="" /> */}
+          <img className="w-1/12 block mx-auto" src={require(`../../image/Delhi.svg`)} alt="" />
         </div>
     )
 }

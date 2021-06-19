@@ -10,7 +10,7 @@ body{
   background-color: #D4D2DC;
 }
 .content_wrapper{
-  background-color: #1A1053;
+  background-color: lightgray;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -20,7 +20,7 @@ body{
   /* background-color: red; */
 }
 .navbarItem .skew{
-  background-color:#f6fbfe;
+  background-color:#1A1053;
   width:100%;
   transform: skewX(-165deg);
   border-top-left-radius: 20px;
@@ -37,7 +37,7 @@ body{
 }
 
 .content{
-  background-color:ghostwhite;
+  background-color:#1A1053;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
@@ -47,10 +47,7 @@ body{
   border-radius: 30px;
 }
 
-.india_container{
-  border-radius: 30px;
-  background-color: #dbe8fb;
-}
+
 .caseComponent{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: .2s ease-in-out;
@@ -61,6 +58,9 @@ body{
 .selectState{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
+/* button animation */
+  
 
 
 

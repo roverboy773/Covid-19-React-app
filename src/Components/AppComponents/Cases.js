@@ -50,7 +50,7 @@ const Cases = () => {
             }).then(()=>{
                 setPending(false)
                 if(window.innerWidth<=425)
-                  window.scrollTo(0,1600)
+                  window.scrollTo(0,1620)
             })
 
             return()=>{
@@ -74,7 +74,7 @@ const Cases = () => {
                     {/* fatalities components */}
                     <CasesComponent type="deaths" numbers={state.cases.deaths} />
                     
-                    <h3 className="font-bold absolute bottom-0 right-0 text-center">Last Updated <span className="block">{updatedTime}</span></h3>
+                    <h3 className="font-bold absolute bottom-0 right-0 text-center text-gray-400">Last Updated <span className="block">{updatedTime}</span></h3>
                     
             </div>
            

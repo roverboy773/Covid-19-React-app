@@ -79,7 +79,8 @@ const ChartDisplay = () => {
                             backgroundColor: '#f15052',
                             borderColor: 'rgba(0,0,0,1)',
                             borderWidth: 0,
-                            data: confirmedData
+                            scaleFontColor: "#FFFFFF",
+                            data: confirmedData,
                         }
                     ]
                 })
@@ -100,16 +101,16 @@ const ChartDisplay = () => {
 
 
     return (
-        <div className="w-11/12 mx-auto md:flex justify-between">
+        <div className="w-11/12 md:w-2/3 mx-auto md:flex items-center justify-around">
 
-            <div className="cursor-pointer w-2/3">
+            <div className="cursor-pointer w-11/12 md:w-4/5 text-white">
                 <Line width="600" height="600" data={state}
                     options={{
                         title: {
                             display: true,
                             text: 'India covid-19 Cases',
                             font: {
-                                size: 20
+                                size: 30
                             }
                         },
                         legend: {
@@ -119,11 +120,11 @@ const ChartDisplay = () => {
                         maintainAspectRatio: true,
                         responsive: true,
                         scales: {
-                            xAxes: {
+                            xAxes: [{
                                 display: true,
                                 title: {
                                     display: true,
-                                    text: "Days/month/year",
+                                    text: "Timeline",
                                     font: {
                                         family: 'Times',
                                         size: 20,
@@ -134,11 +135,12 @@ const ChartDisplay = () => {
                                 ticks: {
                                     autoSkip: true,
                                     maxTicksLimit: 6,
-                                    beginAtZero: true
-                                },
+                                    beginAtZero: true,
+                                    fontColor:"white"
+                                }
 
-                            },
-                            yAxes: {
+                            }],
+                            yAxes: [{
                                 display: true,
                                 title: {
                                     display: true,
@@ -149,10 +151,12 @@ const ChartDisplay = () => {
                                         style: 'normal',
                                         lineHeight: 1.2
                                     }
+                                },ticks:{
+                                    fontColor: "#CCC"
                                 },
                                 min: 0,
                                 max: 500000
-                            }
+                            }]
                         },
                         pan: {
                             enabled: true,
@@ -172,7 +176,7 @@ const ChartDisplay = () => {
 
             </div>
 
-            <div className="flex flex-col justify-center items-center text-center">
+            <div className="flex flex-col justify-center items-center text-center text-gray-400">
                 <label htmlFor="">Starting Date</label>
                 <DatePicker className="border-2 rounded-md bg-blue-500 text-white p-1 outline-none" dateFormat="dd/MM/yyyy" selectsStart startDate={startDate} endDate={endDate} selected={startDate} onChange={(date) => setStartDate(date)} />
                 <label htmlFor="">Ending Date</label>

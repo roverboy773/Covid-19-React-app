@@ -5,10 +5,10 @@ const StateSelect = () => {
     const {state,setRegion}=useContext(GlobalContext)
 
     return (
-        <div className="text-center font-bold md:flex flex-row justify-around items-center w-full py-2 md:w-4/5">
+        <div className="text-center font-bold md:flex flex-row justify-around  w-full py-2 md:w-4/5">
         <div >
-            <label htmlFor="state" className="font-bold mr-8">Select Your State/UT</label>
-            <select name="state" id="state" className=" selectState block border-2 p-2 rounded-md text-md outline-none w-full " 
+            <label htmlFor="state" className="font-bold my-3 block text-gray-400">Select Your State/UT</label>
+            <select name="state" id="state" className=" selectState block border-2 p-2 rounded-md text-md outline-none w-11/12 " 
               onChange={(e)=>{setRegion(e.target.value)}}>
                 <option value={state.region}>{state.region}</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -48,7 +48,7 @@ const StateSelect = () => {
                 <option value="West Bengal">West Bengal</option>
             </select>
            </div>
-                <div className="py-2">
+                <div className="py-2 text-gray-400">
                    <h2 className="text-center"><span className="mr-2">OR</span>Mark your region on Map</h2>
                 </div>
         </div>

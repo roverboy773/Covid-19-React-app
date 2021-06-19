@@ -14,7 +14,7 @@ function App() {
   return (
     <GlobalProvider>
       <Heading />
-      <div className="content_wrapper my-8 w-screen md:w-11/12 mx-auto md:flex flex-row">
+      <div className="content_wrapper w-full md:w-11/12 my-8 mx-auto md:flex flex-row pl-2">
         <Navbar />
         <div className="content w-full">
           <Heading2 />
