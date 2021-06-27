@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useContext} from 'react'
 import List from './List'
-
 import Pending from "../AppComponents/Pending"
+import { GlobalContextLab } from '../../context/GlobalContextLab'
 import '../../css/Lab.css'
 import moment from 'moment'
 
 const ListContainer = () => {
+const {removeAllFilter} = useContext(GlobalContextLab)
 
     const [pinCode, setPinCode] = useState('')
     const [pending, setPending] = useState(false)
@@ -42,6 +43,7 @@ const ListContainer = () => {
 
     useEffect(() => {
         const ac = new AbortController();
+        removeAllFilter()
         setCenters([])
         getCenters()
 
