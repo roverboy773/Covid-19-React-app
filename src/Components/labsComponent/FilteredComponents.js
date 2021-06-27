@@ -15,7 +15,7 @@ const FilteredComponents = ({ ele }) => {
     let finalFlag = false
     
     for (let prop in state) {
-      ele.sessions.ForEach((session) => {
+      ele.sessions.map((session) => {
         let flag = false
         //console.log(ele[prop]===state[prop] || session[prop]===state[prop])
         if (state[prop].includes(session[prop]) && state[prop].length>0) {
