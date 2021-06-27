@@ -29,7 +29,7 @@ const ListContainer = () => {
                     setError(`*${res.error}`)
                 if (res.hasOwnProperty('centers')) {
                     let arr = [];
-                    res.centers.ForEach(element => {
+                    res.centers.map(element => {
                         //console.log(element)
                         arr.push(element)
                         //   console.log(Centers)

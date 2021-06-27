@@ -73,7 +73,7 @@ const ChartDisplay = () => {
                             label: 'Daily Covid-19 Cases',
                             fill: true,
                             lineTension: 0.5,
-                            backgroundColor: '#f15052',
+                            backgroundColor: 'rgba(239, 68, 68,1)',
                             borderColor: 'rgba(0,0,0,1)',
                             borderWidth: 0,
                             scaleFontColor: "#FFFFFF",

@@ -4,7 +4,7 @@ import ListContainer from "./Components/labsComponent/ListContainer"
 import Header from './Components/labsComponent/Header'
 import Navbar from './Components/AppComponents/Navbar'
 import { GlobalProvider } from './context/GlobalContextLab'
-import './css/index.css'
+import './css/Lab.css'
 
 const Labs = () => {
     return (

@@ -23,7 +23,7 @@ const {state,setRegion}=useContext(GlobalContext)
                 e.target.classList.add('selected_state')
                 // setState(e.target.getAttribute('title'))
                 if(window.innerWidth<=1024)
-                   window.scrollTo(0,0)
+                   window.scrollTo({top:1200,behavior:'smooth'})
                 
             })
         })

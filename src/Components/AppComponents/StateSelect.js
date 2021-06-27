@@ -8,8 +8,13 @@ const StateSelect = () => {
         <div className="text-center font-bold md:flex flex-row justify-around  w-full py-2 md:w-4/5">
         <div >
             <label htmlFor="state" className="font-bold my-3 block text-gray-400">Select Your State/UT</label>
-            <select name="state" id="state" className=" selectState block border-2 p-2 rounded-md text-md outline-none w-11/12 " 
-              onChange={(e)=>{setRegion(e.target.value)}}>
+            <select name="state" id="state" 
+            className=" selectState block border-2 p-2 rounded-md text-md outline-none w-11/12 bg-gray-200" 
+              onChange={(e)=>{
+                  setRegion(e.target.value);
+                  if(window.innerWidth<=1024)
+                   window.scrollTo({top:1200,behavior:'smooth'})
+                   }}>
                 <option value={state.region}>{state.region}</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>

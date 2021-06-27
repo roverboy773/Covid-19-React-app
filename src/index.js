@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
 import App from './App';
 import Labs from './Labs'
+import Journals from "./Journals"
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
 ReactDOM.render(
@@ -13,6 +13,10 @@ ReactDOM.render(
          <Route path="/labs">
             <Labs/>
          </Route>
+
+          <Route path="/journals">
+             <Journals></Journals>
+          </Route>
 
          <Route path="/">
             <App />

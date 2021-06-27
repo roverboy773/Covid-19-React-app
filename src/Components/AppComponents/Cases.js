@@ -8,6 +8,8 @@ const Cases = () => {
     const { state,setCases } = useContext(GlobalContext)
     const [updatedTime, setUpdatedTime] = useState('0:0:0:0')
     //console.log(state)
+    
+
     useEffect(() => {
     
         fetch("https://api.covid19india.org/data.json")
