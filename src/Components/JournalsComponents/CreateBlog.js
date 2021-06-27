@@ -3,7 +3,7 @@ import axios from 'axios'
 import ReactQuill from 'react-quill'
 import '../../../node_modules/react-quill/dist/quill.snow.css'
 
-const CreateBlog = ({ refresh ,Create}) => {
+const CreateBlog = ({ refresh, Create }) => {
     const [create, setCreate] = useState(false)
     const [author, setAuthor] = useState('')
     const [desc, setDesc] = useState('')
@@ -12,13 +12,14 @@ const CreateBlog = ({ refresh ,Create}) => {
     const [response, setResponse] = useState('')
     const [resCode, setResCode] = useState('')
     const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const modules = {
         toolbar: [
-            ['bold', 'italic','link', 'blockquote', 'code', 'image', 'underline',
-                  {list:'ordered'},{list:'bullet'},{'align':[]},{'script':'sub'},{'script':'super'},
-                  {'font':[]},{'header':[1,2,3,4,5,6,false]},{'indent':'-1'}, {'indent':'+1'},
-                  { 'direction': 'rtl' },{ 'color': [] }
+            ['bold', 'italic', 'link', 'blockquote', 'code', 'image', 'underline',
+                { list: 'ordered' }, { list: 'bullet' }, { 'align': [] }, { 'script': 'sub' }, { 'script': 'super' },
+                { 'font': [] }, { 'header': [1, 2, 3, 4, 5, 6, false] }, { 'indent': '-1' }, { 'indent': '+1' },
+                { 'direction': 'rtl' }, { 'color': [] }
             ]
         ]
     }
@@ -32,16 +33,18 @@ const CreateBlog = ({ refresh ,Create}) => {
         //     body,
         //     desc
         // }
-        const formData=new FormData()
-        formData.append('author',author)
-        formData.append('heading',heading)
-        formData.append('body',body)
-        formData.append('desc',desc)
-        formData.append('image',image)
+        setLoading(true)
+        const formData = new FormData()
+        formData.append('author', author)
+        formData.append('heading', heading)
+        formData.append('body', body)
+        formData.append('desc', desc)
+        formData.append('image', image)
 
         const res = await axios.post('https://covid-19-journals.herokuapp.com/create-blog', formData)
         //    console.log(res)
         if (res) {
+            setLoading(false)
             setResCode(res.status)
             setResponse(res.data.msg)
             if (res.status === 200) {
@@ -58,18 +61,18 @@ const CreateBlog = ({ refresh ,Create}) => {
 
     }
 
-    const handleChange=(html)=>{
-         setBody(html)
+    const handleChange = (html) => {
+        setBody(html)
     }
     useEffect(() => {
-        if(create)
-        Create(true)
+        if (create)
+            Create(true)
         else Create(false)
         return () => {
         }
     }, [create])
     return (
-        <div className={`create w-full p-3` }>
+        <div className={`create w-full p-3`}>
             {
                 resCode === 200 && <h3 className="my-2 w-11/12 text-center bg-green-400 pt-2 rounded-lg text-white leading-8">{response.toUpperCase()}</h3>
             }
@@ -94,27 +97,32 @@ const CreateBlog = ({ refresh ,Create}) => {
                                 onChange={(e) => { setDesc(e.target.value) }}
                                 required ></textarea>
 
-                            <input type="file" placeholder="Choose an image" onChange={(e)=>{setImage(e.target.files[0])}}
-                                  className="w-full block mx-auto my-2 py-2 px-3 rounded-xl bg-indigo-400 text-white"
-                                 />
+                            <input type="file" placeholder="Choose an image" onChange={(e) => { setImage(e.target.files[0]) }}
+                                className="w-full block mx-auto my-2 py-2 px-3 rounded-xl bg-indigo-400 text-white"
+                            />
 
-                                <ReactQuill value={body}
-                                    placeholder='Body'
-                                    className="w-full block mx-auto my-2 shadow-2xl "
-                                    onChange={handleChange}
-                                    modules={modules}
-                                    theme='snow'
-                                    required></ReactQuill>
-                            
+                            <ReactQuill value={body}
+                                placeholder='Body'
+                                className="w-full block mx-auto my-2 shadow-2xl "
+                                onChange={handleChange}
+                                modules={modules}
+                                theme='snow'
+                                required></ReactQuill>
 
-                            <button className="bg-indigo-500 px-3 pt-2 text-center mx-auto rounded-xl block text-white leading-8">POST</button>
+                            {
+                                (!loading) ? <button className="bg-indigo-500 px-3 pt-2 text-center mx-auto rounded-xl block text-white leading-8">POST</button>
+                                    : <div className="flex items-center justify-center py-2">
+                                        <div className="animate-spin w-8 h-8 rounded-full border-t-2 border-r-2 border-indigo-500 mr-1">
+                                        </div>
+                                        Wait a sec
+                                     </div>
 
-
+                            }
                         </form>
                     </div>
 
                     :
-                    <button className="bg-indigo-500 w-full pt-2 px-4 text-center text-white rounded-md block leading-8"
+                    <button className="bg-indigo-500 w-full py-2 px-4 text-center text-white rounded-md block leading-8"
                         onClick={() => setCreate(true)}>Create a Journal</button>
             }
         </div>

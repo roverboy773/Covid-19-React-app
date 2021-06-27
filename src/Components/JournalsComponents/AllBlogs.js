@@ -64,7 +64,7 @@ const AllBlogs = ({ refresh, bloguuid }) => {
                     blogs.map((blog, indx) => (
                         <div className="w-11/12 mx-auto mb-2 bg-gray-200 rounded-md py-2 px-2" key={indx}>
 
-                            <h3 className="text-blue-500 font-bold text-2xl cursor-pointer heading"
+                            <h3 className="text-blue-500 font-bold text-xl cursor-pointer heading"
                               onClick={()=>{handleClick(blog)}}  >{`# ${blog.heading}`}</h3>
 
                             <div className="text-gray-600 text-right">

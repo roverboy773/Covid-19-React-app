@@ -27,7 +27,7 @@ input::-webkit-outer-spin-button{
   }
   
  .session_container::-webkit-scrollbar-track {
-    background: rgba(67, 56, 202,1); 
+    background: black; 
   }
 
  .session_container::-webkit-scrollbar-thumb {

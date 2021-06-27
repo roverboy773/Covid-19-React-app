@@ -15,11 +15,11 @@ const Center = ({ data }) => {
         }
     }, [state])
     return (
-        <div className=" center border-2 border-gray-700 text-left rounded-xl m-4 ">
+        <div className=" center border-2 border-gray-700 text-left rounded-xl my-4 mx-1 md:mx-0 w-full">
             {
                 centerCount === 0 ? <div className="text-gray-400">No Vaccination Center Available to Book at this time,Kindly Check Later</div>
                     :
-                        <div className="center_content block md:flex mx-auto py-1 ">
+                        <div className="center_content block md:flex mx-auto py-1  ">
                             <Centerinfo data={data}></Centerinfo>
                             <div className="w-auto bg-indigo-600 session_container rounded-xl my-2 overflow-x-scroll">
                                 <div className="flex">
