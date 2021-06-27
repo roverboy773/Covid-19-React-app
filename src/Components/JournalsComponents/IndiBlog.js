@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import image from '../../image/382692.jpg'
 import axios from 'axios'
 
 // import { htmlToText } from 'html-to-text'
