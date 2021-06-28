@@ -25,6 +25,7 @@ const CreateBlog = ({ refresh, Create }) => {
     }
 
     const handleSubmit = async (e) => {
+        try{
         e.preventDefault()
         //console.log('handle')
         // const data = {
@@ -34,14 +35,23 @@ const CreateBlog = ({ refresh, Create }) => {
         //     desc
         // }
         setLoading(true)
-        const formData = new FormData()
-        formData.append('author', author)
-        formData.append('heading', heading)
-        formData.append('body', body)
-        formData.append('desc', desc)
-        formData.append('image', image)
+        const formData1=new FormData()
+        formData1.append('file',image)
+        formData1.append('upload_preset','journal')
+        formData1.append('cloud_name','rover773')
+          
+      fetch('https://api.cloudinary.com/v1_1/rover773/image/upload',{
+          method:'POST',
+          body:formData1
+      })
+      .then(result=>result.json())
+      .then(async (result)=>{
+          
+        if(result.secure_url){
 
-        const res = await axios.post('https://covid-19-journals.herokuapp.com/create-blog', formData)
+            const data={author,heading,body,desc,image:result.secure_url}
+
+        const res = await axios.post('https://covid-19-journals.herokuapp.com/create-blog',data )
         //    console.log(res)
         if (res) {
             setLoading(false)
@@ -58,9 +68,12 @@ const CreateBlog = ({ refresh, Create }) => {
                 }, 1000)
             }
         }
-
+    }      
+})
+    }catch(e){
+        console.log(e)
     }
-
+}
     const handleChange = (html) => {
         setBody(html)
     }

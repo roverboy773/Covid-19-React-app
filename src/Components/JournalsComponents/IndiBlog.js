@@ -81,7 +81,7 @@ const IndiBlog = ({ blog }) => {
                             <div className="rounded-md indi-container">
                                 <div className=" relative">
                                     <div className="indi md:rounded-xl w-full relative">
-                                        <img src={`https://covid-19-journals.herokuapp.com/${indi.image}`} alt="" className="inline-block md:rounded-xl h-full w-full object-fill" />
+                                        <img src={indi.image} alt="" className="inline-block md:rounded-xl h-full w-full object-fill" />
                                     </div>
                                     <div className="absolute info_container w-full ">
                                         <div className="w-full ">
