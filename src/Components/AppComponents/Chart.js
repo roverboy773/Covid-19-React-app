@@ -30,8 +30,8 @@ const ChartDisplay = () => {
         let endyear = +moment(endDate).format('l').split('/')[2]
 
 
-        fetch("")
-            .then((res) => { return res.json() })
+        fetch("https://res.cloudinary.com/rover773/raw/upload/v1636220063/data_e1egeg.json")
+            .then((res) => {  return res.json() })
             .then((res) => {
 
                 res.cases_time_series.forEach((ele) => {

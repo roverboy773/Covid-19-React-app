@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="flex items-center justify-around md:hidden">
                 <i className="fas fa-virus text-3xl text-indigo-900 md:my-6 block"></i>
                  <Hambger navToggle={(State)=> {{setNavState(State);if(h==='h-0') setH('h-auto'); else setH('h-0');}}}>
-        </Hambger>
+                  </Hambger>
             </div>
             <div className=" nav w-full mx-auto md:block hidden h-0">
                      <i className="fas fa-virus text-3xl text-indigo-900 md:my-6 block"></i>
@@ -28,7 +28,7 @@ const Navbar = () => {
             </div>
             {/* {console.log(navState)} */}
             
-                <div className={`menu nav w-full mx-auto md:block mb-4 transform scale-y-100 ${h} overflow-hidden transition delay-500 duration-1000  `}>
+                <div className={`menu nav w-full mx-auto md:block mb-4 transform ${h} overflow-hidden transition delay-500 duration-1000  `}>
                       <div className={`transition transform  duration-1000 scale-y-100 delay-500 h-1/2`}>
                     <NavLink to="/" className="active_nav"><NavbarItem icon="las la-home " name="Overview" /></NavLink>
                     <NavLink to="/symptoms"><NavbarItem icon="fas fa-head-side-cough " name="Symptoms" /></NavLink>

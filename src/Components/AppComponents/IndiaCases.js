@@ -19,7 +19,7 @@ const IndiaCases = () => {
     })
     //console.log(state)
     useEffect(() => {
-        fetch("https://api.covid19india.org/data.json")
+        fetch("https://res.cloudinary.com/rover773/raw/upload/v1636220063/data_e1egeg.json")
             .then((res) => {  return res.json() })
             .then((res) => {
               

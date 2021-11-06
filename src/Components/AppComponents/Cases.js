@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useContext, useEffect ,useState} from 'react'
 import CasesComponent from './CasesComponent'
 import { GlobalContext } from "../../context/GlobalContext"
@@ -12,11 +13,11 @@ const Cases = () => {
 
     useEffect(() => {
     
-        fetch("https://api.covid19india.org/data.json")
-            .then((res) => { return res.json() })
-            .then((res) => {
-               
-                res.statewise.forEach((local) => {
+        fetch("https://res.cloudinary.com/rover773/raw/upload/v1636220063/data_e1egeg.json")
+        .then((res) => { return res.json() })
+        .then((res) => {
+            // console.log(res)
+                res.cases_time_series.forEach((local) => {
                     if (local.state === state.region) {
                        //console.log(state.region)
                         setUpdatedTime(local.lastupdatedtime)
