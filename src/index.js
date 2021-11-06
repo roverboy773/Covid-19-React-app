@@ -10,15 +10,15 @@ ReactDOM.render(
      <Router>
        <Switch>
 
-         <Route path="/labs">
+         <Route exact path="/labs">
             <Labs/>
          </Route>
 
-          <Route path="/journals">
+          <Route exact path="/journals">
              <Journals></Journals>
           </Route>
 
-         <Route path="/">
+         <Route exact path="/">
             <App />
          </Route>
 
