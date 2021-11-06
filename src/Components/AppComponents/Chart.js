@@ -30,7 +30,7 @@ const ChartDisplay = () => {
         let endyear = +moment(endDate).format('l').split('/')[2]
 
 
-        fetch('https://api.covid19india.org/data.json')
+        fetch("")
             .then((res) => { return res.json() })
             .then((res) => {
 

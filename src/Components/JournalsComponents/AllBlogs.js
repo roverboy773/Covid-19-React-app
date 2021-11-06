@@ -29,7 +29,10 @@ const AllBlogs = ({ refresh, bloguuid }) => {
     useEffect(() => {
           setLoading(true)
         axios.get('https://covid-19-journals.herokuapp.com/allJournals')
-            .then((res) => res.data)
+            .then((res)=>{
+                console.log(res);
+               return res.data
+            })
             .then(res => {
                 setLoading(false)
                 setBlogs(res.data)
